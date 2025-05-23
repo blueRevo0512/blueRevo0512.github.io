@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek 聊天</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>与 AI 聊天</h1>
+            <div class="mode-selector">
+                <label for="chatMode">模式：</label>
+                <select id="chatMode">
+                    <option value="normal">普通聊天</option>
+                    <option value="counseling">心理咨询</option>
+                </select>
+            </div>
+        </header>
+        <div class="chat-messages" id="chatMessages">
+            <!-- 聊天消息将在这里显示 -->
+        </div>
+        <footer class="chat-input-area">
+            <textarea id="userInput" placeholder="输入消息..." rows="1"></textarea>
+            <button id="sendButton">发送</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
