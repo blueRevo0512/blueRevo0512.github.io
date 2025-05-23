@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepSeek 聊天</title>
+    <title>AI 聊天</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="chat-container">
         <header class="chat-header">
             <h1>与 AI 聊天</h1>
-            <div class="mode-selector">
-                <label for="chatMode">模式：</label>
-                <select id="chatMode">
-                    <option value="normal">普通聊天</option>
-                    <option value="counseling">心理咨询</option>
-                </select>
+            <div class="controls">
+                <div class="mode-selector">
+                    <label for="chatMode">模式：</label>
+                    <select id="chatMode">
+                        <option value="normal">普通聊天</option>
+                        <option value="counseling">心理咨询</option>
+                    </select>
+                </div>
+                <button id="clearChatButton" title="清空当前模式聊天记录">清空记录</button>
+                <button id="exportChatButton" title="导出当前模式聊天记录">导出记录</button>
             </div>
         </header>
         <div class="chat-messages" id="chatMessages">
