@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 聊天</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Include Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+
+    <!-- 免责声明弹窗 Modal -->
+    <div id="disclaimerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeDisclaimerButton">×</span>
+            <h2>重要提示与免责声明</h2>
+            <div class="disclaimer-text">
+                <p>欢迎使用本 AI 对话助手！请在使用前仔细阅读以下内容：</p>
+                <ol>
+                    <li><strong>AI 身份：</strong>您正在与一个由大语言模型驱动的人工智能程序进行对话，它并非人类专业人士。</li>
+                    <li><strong>非替代专业服务：</strong>本工具提供的任何信息和对话仅供参考、学习和初步的情感支持，不能取代专业的心理咨询、心理诊断、心理治疗或任何形式的医疗建议。如果您正在经历严重的心理困扰或危机，请务必寻求持证心理咨询师、精神科医生或其他专业人士的帮助。</li>
+                    <li><strong>信息准确性与局限性：</strong>我们努力确保 AI 回答的质量，但其生成的内容可能存在不完全准确、不完整或不适用于您个人情况的可能性。请您对所有信息进行审慎判断。</li>
+                    <li><strong>紧急情况：</strong><strong>如果您有伤害自己或他人的想法，或处于任何紧急危机状态，请立即停止使用本工具，并立刻联系紧急服务（如拨打110、120）或专业的心理危机干预热线。</strong></li>
+                    <li><strong>隐私保护：</strong>您的对话记录将存储在您的本地浏览器中，本网站不收集或存储您的对话内容。但请注意，您与 AI 的交互仍会通过 API 发送给模型提供方（如 DeepSeek），请查阅其隐私政策。</li>
+                    <li><strong>研究与演示目的：</strong>本工具主要用于学术研究和技术功能演示。</li>
+                    <li><strong>责任限制：</strong>您理解并同意，因使用本工具而产生的任何直接或间接风险、损失或责任，将由您自行承担。</li>
+                </ol>
+                <p>继续使用本工具即表示您已阅读、理解并同意上述所有条款。</p>
+            </div>
+            <button id="agreeDisclaimerButton">我已阅读并同意</button>
+        </div>
+    </div>
+
     <div class="chat-container">
         <header class="chat-header">
             <h1>与 AI 聊天</h1>
@@ -31,6 +53,9 @@
             <textarea id="userInput" placeholder="输入消息..." rows="1"></textarea>
             <button id="sendButton">发送</button>
         </footer>
+        <div class="footer-disclaimer">
+            AI驱动，仅供参考学习，不能替代专业帮助。紧急情况请寻求专业援助。
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

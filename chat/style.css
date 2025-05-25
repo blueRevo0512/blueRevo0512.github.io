@@ -247,3 +247,100 @@ body {
 .chat-messages::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
 .chat-messages::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
 .chat-messages::-webkit-scrollbar-thumb:hover { background: #aaa; }
+/* --- Modal Styles for Disclaimer --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    padding-top: 60px; /* Location of the box */
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.disclaimer-text {
+    max-height: 50vh; /* Limit height of disclaimer text for scrollability */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+.disclaimer-text ol {
+    padding-left: 20px;
+}
+.disclaimer-text li {
+    margin-bottom: 10px;
+}
+.disclaimer-text strong {
+    color: var(--text-color-dark);
+}
+
+#agreeDisclaimerButton {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+#agreeDisclaimerButton:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* --- Footer Disclaimer --- */
+.footer-disclaimer {
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 0.75em;
+    color: #777;
+    background-color: #f8f9fa; /* Match input area background */
+    border-top: 1px solid #eee;
+}
